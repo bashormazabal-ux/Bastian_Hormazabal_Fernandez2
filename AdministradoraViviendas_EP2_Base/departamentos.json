@@ -1,0 +1,10 @@
+[
+  {
+    "piso": 5,
+    "gastoComunAlDia": true,
+    "estacionamientoAsignado": true,
+    "codigo": "PROP-D02",
+    "superficie": 80.0,
+    "habitaciones": 3
+  }
+]

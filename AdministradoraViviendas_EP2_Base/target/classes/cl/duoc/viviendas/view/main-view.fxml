@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="cl.duoc.viviendas.controller.ViviendaController"
+            prefWidth="1000.0"
+            prefHeight="650.0">
+
+    <children>
+
+        <Label text="Registro de viviendas"
+               layoutX="30" layoutY="20"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <Label text="Tipo:"
+               layoutX="30" layoutY="75" />
+
+        <ComboBox fx:id="cmbTipo"
+                  layoutX="30" layoutY="95"
+                  prefWidth="280"
+                  promptText="Seleccione..." />
+
+        <Label text="Código:"
+               layoutX="30" layoutY="135" />
+
+        <TextField fx:id="txtCodigo"
+                   layoutX="30" layoutY="155"
+                   prefWidth="280" />
+
+        <Label text="Superficie (m²):"
+               layoutX="30" layoutY="195" />
+
+        <TextField fx:id="txtSuperficie"
+                   layoutX="30" layoutY="215"
+                   prefWidth="280" />
+
+        <Label text="Habitaciones:"
+               layoutX="30" layoutY="255" />
+
+        <TextField fx:id="txtHabitaciones"
+                   layoutX="30" layoutY="275"
+                   prefWidth="280" />
+
+        <Label text="Datos del departamento"
+               layoutX="30" layoutY="325"
+               style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+        <Label text="Piso:"
+               layoutX="30" layoutY="360" />
+
+        <TextField fx:id="txtPiso"
+                   layoutX="30" layoutY="380"
+                   prefWidth="280" />
+
+        <CheckBox fx:id="chkGastoComun"
+                  text="Gasto común al día"
+                  layoutX="30" layoutY="425" />
+
+        <CheckBox fx:id="chkEstacionamiento"
+                  text="Estacionamiento asignado"
+                  layoutX="30" layoutY="455" />
+
+        <Label text="Datos de la casa"
+               layoutX="30" layoutY="495"
+               style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+        <CheckBox fx:id="chkPatio"
+                  text="Cuenta con patio"
+                  layoutX="30" layoutY="530" />
+
+        <Label text="Buscar vivienda por código:"
+               layoutX="350" layoutY="40"
+               style="-fx-font-weight: bold;" />
+
+        <TextField fx:id="txtBuscar"
+                   layoutX="570" layoutY="35"
+                   prefWidth="400"
+                   promptText="Escriba el código para buscar..." />
+
+        <TableView fx:id="tablaViviendas"
+                   layoutX="350" layoutY="90"
+                   prefWidth="620"
+                   prefHeight="385">
+
+            <columns>
+
+                <TableColumn fx:id="colTipo"
+                             text="Tipo"
+                             prefWidth="110" />
+
+                <TableColumn fx:id="colCodigo"
+                             text="Código"
+                             prefWidth="110" />
+
+                <TableColumn fx:id="colSuperficie"
+                             text="Superficie (m²)"
+                             prefWidth="125" />
+
+                <TableColumn fx:id="colHabitaciones"
+                             text="Habitaciones"
+                             prefWidth="125" />
+
+                <TableColumn fx:id="colCosto"
+                             text="Costo arriendo"
+                             prefWidth="150" />
+
+            </columns>
+
+        </TableView>
+
+        <Button fx:id="btnRegistrar"
+                text="Registrar"
+                onAction="#registrarVivienda"
+                layoutX="350" layoutY="500"
+                prefWidth="130" />
+
+        <Button fx:id="btnEliminar"
+                text="Eliminar"
+                onAction="#eliminarVivienda"
+                layoutX="500" layoutY="500"
+                prefWidth="130" />
+
+        <Button text="Ver detalles"
+                onAction="#verDetalles"
+                layoutX="650" layoutY="500"
+                prefWidth="130" />
+
+        <Label fx:id="lblMensaje"
+               layoutX="350" layoutY="555"
+               prefWidth="600"
+               wrapText="true"
+               style="-fx-text-fill: red;" />
+
+    </children>
+
+</AnchorPane>

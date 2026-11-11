@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="cl.duoc.viviendas.controller.DetalleViviendaController"
+      alignment="CENTER"
+      spacing="15"
+      prefWidth="450"
+      prefHeight="430"
+      style="-fx-padding: 25; -fx-background-color: #f4f6f8;">
+
+    <children>
+
+        <Label text="Detalle de la vivienda"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <Separator />
+
+        <Label fx:id="lblTipo"
+               text="Tipo:"
+               style="-fx-font-size: 15px;" />
+
+        <Label fx:id="lblCodigo"
+               text="Código:"
+               style="-fx-font-size: 15px;" />
+
+        <Label fx:id="lblSuperficie"
+               text="Superficie:"
+               style="-fx-font-size: 15px;" />
+
+        <Label fx:id="lblHabitaciones"
+               text="Habitaciones:"
+               style="-fx-font-size: 15px;" />
+
+        <Label fx:id="lblCosto"
+               text="Costo de arriendo:"
+               style="-fx-font-size: 15px; -fx-font-weight: bold;" />
+
+        <Separator />
+
+        <Button text="Cerrar ventana"
+                onAction="#cerrarVentana"
+                prefWidth="160" />
+
+    </children>
+
+</VBox>
